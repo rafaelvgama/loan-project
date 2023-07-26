@@ -1,13 +1,104 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  background: linear-gradient(#000000 300px, #f7f7f7 0);
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.App {
+  margin: 0 20px;
+}
+
+.App h1 {
+  color: #ffffff;
+  padding: 50px 0px;
+  text-align: center;
+  font-size: 28px;
+  margin: 0;
+}
+
+.App h1 span {
+  color: #ffbf00;
+}
+
+.App form {
+  display: grid;
+  gap: 20px;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 4px;
+}
+
+.App label {
+  display: grid;
+  gap: 5px;
+  font-weight: 500;
+}
+
+.App form select,
+.App form input {
+  background-color: #fafafa;
+  padding: 5px;
+  font-size: 16px;
+  border: 1px #808080 solid;
+  border-radius: 4px;
+}
+
+.App input[disabled] {
+  background-color: #d7d7d7;
+}
+
+.App form select:focus,
+.App form input:focus {
+  outline: none;
+  border-color: #ffbb00;
+  box-shadow: 0 0 0 2px #fea;
+  background: #ffffff;
+}
+
+.App form button {
+  padding: 16px 32px;
+  justify-self: center;
+  background: linear-gradient(#ffbf00, #f2a50c);
+  color: #332200;
+  border-radius: 4px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  text-transform: uppercase;
+  font: 600 16px/1.15 "Roboto", sans-serif;
+  max-width: max-content;
+  border: none;
+  cursor: pointer;
+}
+
+.App form button:hover {
+  background: linear-gradient(#ffb60d, #e59317);
+}
+
+.invalid-field {
+  border-color: #f56847;
+  box-shadow: 0 0 0 2px #ff946b;
+}
+
+.error {
+  padding: 10px;
+  background-color: #ffd6ba;
+  border-radius: 4px;
+  border: 2px #f0a48b solid;
+}
+
+.error::before {
+  content: "🚫";
+  display: inline-block;
+  margin-right: 8px;
 }
